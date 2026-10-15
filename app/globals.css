@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * The app's own colours (Plant / Color in Figma, Theme.swift in the app).
+ * Forest is the editorial page's green and stays put; paper is the app's
+ * cream, which turns to the app's dark ground in the dark theme.
+ * Values are RGB triplets so Tailwind's /opacity modifiers work.
+ */
+:root {
+  --forest: 19 36 26;      /* #13241A */
+  --cream: 244 239 228;    /* #F4EFE4 — words on forest */
+  --mint: 159 212 178;     /* #9FD4B2 — the italic line on forest */
+  --paper: 247 244 238;    /* #F7F4EE */
+  --ink: 27 33 25;         /* #1B2119 */
+  --ink-soft: 84 93 74;    /* #545D4A */
+  --line: 220 211 195;     /* #DCD3C3 */
+  --accent: 46 107 75;     /* #2E6B4B */
+  --on-accent: 255 255 255;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: 20 22 17;       /* #141611 */
+  --ink: 242 240 232;      /* #F2F0E8 */
+  --ink-soft: 163 169 151; /* #A3A997 */
+  --line: 58 64 52;        /* #3A4034 */
+  --accent: 116 194 147;   /* #74C293 */
+  --on-accent: 20 22 17;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-feature-settings: 'ss01', 'cv11';
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgb(var(--mint) / 0.45);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--mint));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Sections fade up once as they arrive (components/Reveal.tsx). Hidden
+   only while scripts run (the .js class from app/layout.tsx), so a page
+   whose script never runs still shows everything. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--delay, 0ms);
+}
+.js .reveal[data-shown='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
