@@ -1,3 +1,4 @@
+import { SiteFooter } from '@/components/SiteFooter';
 import { Features } from './sections/Features';
 import { GetTheApp } from './sections/GetTheApp';
 import { Hero } from './sections/Hero';
@@ -16,8 +17,9 @@ export default function Home() {
         <Features />
         <Pricing />
         <Questions />
+        <GetTheApp />
       </main>
-      <GetTheApp />
+      <SiteFooter />
     </>
   );
 }
