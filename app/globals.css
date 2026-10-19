@@ -51,6 +51,52 @@ body {
   border-radius: 6px;
 }
 
+/* The text of the legal pages (components/LegalPage.tsx): paragraphs, lists
+   with a small accent dot, bold and links in full colour. */
+.legal {
+  font-size: 17px;
+  line-height: 28px;
+  color: rgb(var(--ink-soft));
+}
+.legal > * + * {
+  margin-top: 1rem;
+}
+.legal li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.legal li + li {
+  margin-top: 0.625rem;
+}
+.legal li::before {
+  content: '';
+  position: absolute;
+  left: 0.125rem;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgb(var(--accent));
+}
+.legal strong {
+  font-weight: 600;
+  color: rgb(var(--ink));
+}
+.legal a {
+  color: rgb(var(--accent));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* A fact the company still has to give (components/legal.ts). */
+.blank {
+  color: inherit;
+  font-weight: 500;
+  background: color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 5px;
+  padding: 0 0.3em;
+}
+
 /* Sections fade up once as they arrive (components/Reveal.tsx). Hidden
    only while scripts run (the .js class from app/layout.tsx), so a page
    whose script never runs still shows everything. */

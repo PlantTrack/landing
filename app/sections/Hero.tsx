@@ -2,41 +2,15 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { AppStoreBadge } from '@/components/AppStoreBadge';
 import { Container } from '@/components/Container';
-import { Logo } from '@/components/Logo';
 import { PhoneMockup } from '@/components/PhoneMockup';
-import { ThemeToggle } from '@/components/ThemeToggle';
-import { APP_STORE_URL } from '@/components/links';
-
-const nav = [
-  { href: '#how', label: 'How it works' },
-  { href: '#features', label: 'Features' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#questions', label: 'Questions' },
-];
+import { TopBar } from '@/components/TopBar';
 
 // The rule, set large; under it the app's To do between two plants,
 // cut off by the next section the way a magazine crops a photograph.
 export function Hero() {
   return (
     <header id="top" className="relative overflow-hidden bg-forest text-cream">
-      <Container className="flex items-center justify-between py-6 lg:grid lg:grid-cols-[1fr_auto_1fr]">
-        <a href="#top" aria-label="Home Plants" className="justify-self-start">
-          <Logo />
-        </a>
-        <nav className="hidden items-center gap-9 lg:flex" aria-label="Sections">
-          {nav.map((item) => (
-            <a key={item.href} href={item.href} className="text-[15px] font-medium text-cream/70 transition hover:text-cream">
-              {item.label}
-            </a>
-          ))}
-        </nav>
-        <div className="flex items-center gap-3 justify-self-end">
-          <ThemeToggle />
-          <a href={APP_STORE_URL} className="hidden whitespace-nowrap rounded-full bg-cream px-6 py-3 text-[15px] font-semibold text-forest transition hover:bg-white sm:inline-flex">
-            Get the app
-          </a>
-        </div>
-      </Container>
+      <TopBar onHome />
 
       <Container className="flex flex-col items-center pt-14 text-center sm:pt-20">
         <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-cream/60">Home Plants · for iPhone</p>
