@@ -35,12 +35,12 @@ app/
     Hero.tsx          Nav, the rule, the To do screen between two photos
     HowItWorks.tsx    "Late isn't failing", then the three steps
     Features.tsx      Photo ID on a leaf, and what's inside
-    Pricing.tsx       Free and Plus
+    Pricing.tsx       Free and Premium
     Questions.tsx     Good to know
     GetTheApp.tsx     "Every plant in the house" and the footer
 components/
   AppStoreBadge.tsx   Placeholder — see below
-  Logo.tsx            The leaf mark and the name (swap when the logo is chosen)
+  Logo.tsx            The app icon (public/app-icon.png) and the name
   PhoneMockup.tsx     A real app screen, light or dark to match the page
   ThemeToggle.tsx     Light/dark, remembered; follows the system until picked
   Reveal.tsx          Fades sections up once as they arrive
@@ -55,8 +55,8 @@ public/
 - **App Store badge and links** — `components/links.ts` and
   `components/AppStoreBadge.tsx` are placeholders. Use Apple's official badge
   from the App Store Marketing Guidelines once the listing exists.
-- **Privacy, Terms, Contact** — no pages yet.
-- **Logo** — the leaf mark is a stand-in until one of the marks on the Figma
-  page "5 · App icon" is chosen.
+- **Privacy and Terms** — `/privacy/` and `/terms/`, Home Tasker's text made true for Home Plants
+  (`app/privacy/content.tsx`, `app/terms/content.tsx`); the date is in `components/legal.ts`.
+  Contact is `support@homeplants.io`.
 - **Prices** — $24 a year / $2.99 a month and the 7-day trial mirror the app's
   placeholders (`PlusPlan`); StoreKit will set the real ones.

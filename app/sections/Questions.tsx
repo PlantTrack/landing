@@ -6,12 +6,12 @@ const questions = [
     q: 'How does it know when to water?',
     a: 'It asks you to check the soil, and learns from your answers how fast each plant dries in your home — your pot, your light, your season.',
   },
-  { q: 'Do I need an account?', a: 'No. It works from the first minute. Sign in with Apple only if you want your plants on a new phone.' },
+  { q: 'Do I need an account?', a: 'No. It works from the first minute. Sign in with Apple or Google only if you want your plants on a new phone.' },
   {
     q: 'What if I don’t know what my plant is?',
     a: 'Take two photos and it names it. If the guide doesn’t have it yet, ask for it — you’ll hear when it’s in.',
   },
-  { q: 'What happens after three plants?', a: 'Your three stay free. Plus adds every other plant, for $24 a year after a free week.' },
+  { q: 'What happens after three plants?', a: 'Your three stay free. Premium adds every other plant, and more, for $24 a year after a free week.' },
   { q: 'Where does it work?', a: 'In the US for now: your town sets the seasons and weather for your plants.' },
 ];
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: { card: 'summary_large_image' },
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: '/favicon.svg', apple: '/apple-touch-icon.png' },
 };
 
 export const viewport: Viewport = {
