@@ -1,0 +1,4 @@
+# Netlify: build the static site into out/ and publish that folder.
+[build]
+  command = "npm run build"
+  publish = "out"

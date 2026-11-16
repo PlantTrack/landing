@@ -26,7 +26,17 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: { card: 'summary_large_image' },
-  icons: { icon: '/favicon.svg', apple: '/apple-touch-icon.png' },
+  // The app's own icon. PNG and ICO as well as SVG: Safari keeps an old
+  // favicon for a long time and doesn't always take SVG ones.
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32 48x48' },
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export const viewport: Viewport = {
