@@ -39,7 +39,7 @@ app/
     Questions.tsx     Good to know
     GetTheApp.tsx     "Every plant in the house" and the footer
 components/
-  AppStoreBadge.tsx   Placeholder — see below
+  AppStoreBadge.tsx   Apple's official badge
   Logo.tsx            The app icon (public/app-icon.png) and the name
   PhoneMockup.tsx     A real app screen, light or dark to match the page
   ThemeToggle.tsx     Light/dark, remembered; follows the system until picked
@@ -52,9 +52,8 @@ public/
 
 ## Before it goes live
 
-- **App Store badge and links** — `components/links.ts` and
-  `components/AppStoreBadge.tsx` are placeholders. Use Apple's official badge
-  from the App Store Marketing Guidelines once the listing exists.
+- **App Store badge and links** — done: Apple's official badge (`public/app-store-badge.svg`) and
+  `components/links.ts` link to the app's record (Apple ID 6835531373), live once Apple releases it.
 - **Privacy and Terms** — `/privacy/` and `/terms/`, Home Tasker's text made true for Home Plants
   (`app/privacy/content.tsx`, `app/terms/content.tsx`); the date is in `components/legal.ts`.
   Contact is `support@homeplants.io`.

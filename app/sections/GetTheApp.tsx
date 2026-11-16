@@ -15,7 +15,7 @@ export function GetTheApp() {
           </h2>
         </Reveal>
         <Reveal delay={90} className="mt-10">
-          <AppStoreBadge outlined />
+          <AppStoreBadge />
         </Reveal>
       </Container>
     </section>

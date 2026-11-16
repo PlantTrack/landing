@@ -23,7 +23,7 @@ export function Hero() {
           Home Plants asks how the soil feels now and then, and learns each plant’s rhythm in your home.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
-          <AppStoreBadge outlined />
+          <AppStoreBadge />
           <a href="#how" className="inline-flex items-center gap-2 text-[17px] font-semibold text-cream transition hover:text-mint">
             See how it works <ArrowRight className="h-[18px] w-[18px]" strokeWidth={2} />
           </a>
